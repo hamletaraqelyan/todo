@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+
+.todoForm {
+  //position: sticky;
+  //top: 23%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 2rem 0;
+  background-color: var(--current-gray);
+  padding: 1rem;
+  border-radius: $bRadius;
+  box-shadow: $boxShadow;
+
+  input {
+    width: calc(100% - 1.5rem);
+    padding: 0.2rem 0 0.2rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--current-gray);
+    color: var(--current-foreground);
+
+    &::placeholder {
+      font-weight: 400;
+      opacity: 0.8;
+    }
+  }
+
+  button {
+    border: 1px solid var(--current-foreground);
+    color: var(--current-foreground);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.8;
+
+    &:hover {
+      background-color: #7baddc;
+    }
+  }
+}

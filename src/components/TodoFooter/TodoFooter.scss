@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.todoFooter {
+  padding: 1.3rem 1rem;
+  background-color: var(--current-gray);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 $bRadius $bRadius;
+  box-shadow: $boxShadow;
+
+  &, button {
+    font-size: 0.7rem;
+    color: var(--current-foreground);
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+
+.todoList {
+  background-color: var(--current-gray);
+  border-radius: $bRadius $bRadius 0 0;
+  box-shadow: $boxShadow;
+}

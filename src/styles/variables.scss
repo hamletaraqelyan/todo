@@ -1,0 +1,43 @@
+$bRadius: 0.5rem;
+$boxShadow: 0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+$borderColor: #b6b4c0;
+$borderColorSmooth: #eeecf3;
+
+:root {
+  //Dark theme colors
+  --dark-background: #161722;
+  --dark-foregeound: #fafafa;
+  --dark-gray: #25273c;
+  --dark-border-color: #323449;
+  --dark-background-image: url("../media/images/darkModeBG.jpeg");
+  --dark-checked-image: url("../media/icons/lightChecked.svg");
+
+
+  //Light theme colors
+  --light-background: #fafafa;
+  --light-foregeound: #161722;
+  --light-gray: #fff;
+  --light-border-color: #eeecf3;
+  --light-background-image: url("../media/images/lightModeBG.jpeg");
+  --light-checked-image: url("../media/icons/darkChecked.svg");
+
+  .App {
+    &.dark {
+      --current-background: var(--dark-background);
+      --current-foreground: var(--dark-foregeound);
+      --current-gray: var(--dark-gray);
+      --current-border-color: var(--dark-border-color);
+      --current-background-image: var(--dark-background-image);
+      --current-checked-image: var(--light-checked-image);
+    }
+
+    &.light {
+      --current-background: var(--light-background);
+      --current-foreground: var(--light-foregeound);
+      --current-gray: var(--light-gray);
+      --current-border-color: var(--light-border-color);
+      --current-background-image: var(--light-background-image);
+      --current-checked-image: var(--dark-checked-image);
+    }
+  }
+}

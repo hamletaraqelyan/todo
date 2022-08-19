@@ -1,0 +1,58 @@
+@import "base";
+@import "variables";
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--current-background);
+
+  &::before, &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 100vh;
+  }
+
+  &::before {
+    background: center no-repeat var(--current-background-image);
+    background-size: cover;
+    filter: brightness(0.8);
+    transition: background-image .3s ease;
+  }
+
+  &::after {
+    background-color: #C850C0;
+    background-image: linear-gradient(90deg, #C850C0 0%, #4158D0 100%);
+    opacity: 0.1;
+  }
+
+  .todo {
+    width: 42%;
+    height: 100%;
+    padding: 7% 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    .todo {
+      width: 70%;
+      padding-top: 20%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    .todo {
+      width: 85%;
+    }
+  }
+}
