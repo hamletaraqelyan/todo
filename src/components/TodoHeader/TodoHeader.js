@@ -7,7 +7,7 @@ const TodoHeader = ({darkTheme, switchTheme}) => {
     return (
         <div className='todoHeader'>
             TODO
-            <button onClick={switchTheme}>
+            <button onClick={switchTheme} title={`Switch to ${darkTheme ? 'light theme' : 'dark theme'}`}>
                 {darkTheme ?
                     <LightThemeIcon/>
                     :
