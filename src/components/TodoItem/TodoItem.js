@@ -1,17 +1,20 @@
 import React from 'react';
 import "./TodoItem.scss";
+import {useDispatch} from "react-redux";
+import {completeTodo, deleteTodo} from "../../features/todos/todosSlice";
 
-const TodoItem = ({todo, onChange, onDelete}) => {
-
+const TodoItem = ({todo}) => {
+    const dispatch = useDispatch();
     const handleChange = (e) => {
-        onChange({
+        const completed = {
             ...todo,
             isCompleted: e.target.checked
-        })
+        }
+        dispatch(completeTodo({newTodo: completed}))
     }
 
     const handleDelete = () => {
-        onDelete(todo)
+        dispatch(deleteTodo(todo))
     }
 
     return (

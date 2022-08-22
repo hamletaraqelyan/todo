@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import "./TodoForm.scss";
+import {useDispatch} from "react-redux";
+import {addTodo} from "../../features/todos/todosSlice";
 
-const TodoForm = ({onAdd}) => {
+const TodoForm = () => {
+    const dispatch = useDispatch();
     const [text, setText] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (text.trim() !== '') {
-            onAdd(text.trim());
+            dispatch(addTodo({text: text.trim()}))
             setText('');
         }
     }

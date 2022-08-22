@@ -22,7 +22,10 @@
 
     &::placeholder {
       font-weight: 400;
-      opacity: 0.8;
+      opacity: 0.5;
+      color: var(--current-foreground);
+      transition: color .1s ease;
+      user-select: none;
     }
   }
 
